@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kushshah/Desktop/CS/3516/Project_1_A20/Client/add.h
+
+/home/kushshah/Desktop/CS/3516/Project_1_A20/Client/main.c
+stdio.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+stdbool.h
+-
+netdb.h
+-
+sys/time.h
+-
+add.h
+/home/kushshah/Desktop/CS/3516/Project_1_A20/Client/add.h
+

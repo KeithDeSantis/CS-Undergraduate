@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Project2.dir/project2.c.o CMakeFiles/Project2.dir/student2.c.o  -o Project2 
