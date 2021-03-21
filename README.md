@@ -1,7 +1,7 @@
 # CS
 
 -1102
-  Intro to Program Design (A19)
+  Intro to Program Design (A19)\n
 -2011
   Into to Machine Organization and Assembly Language (B20)
  -2102
