@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/C++ day1/Room.h
+ostream
+-
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/C++ day1/main.cpp
+iostream
+-
+Room.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/C++ day1/Room.h
+

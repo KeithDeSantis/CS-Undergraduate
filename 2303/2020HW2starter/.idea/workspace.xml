@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="2020HW2starter" targetName="2020HW2starter" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Default" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab64e2d7-16f9-482d-82b8-8831a1c39a06" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
+  <component name="ProjectId" id="1X1tpacBUJVcakY1CfeYtN63ifT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="2020HW2starter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2020HW2starter" TARGET_NAME="2020HW2starter" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="2020HW2starter" RUN_TARGET_NAME="2020HW2starter">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab64e2d7-16f9-482d-82b8-8831a1c39a06" name="Default Changelist" comment="" />
+      <created>1580225611053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580225611053</updated>
+      <workItem from="1580225612585" duration="285000" />
+      <workItem from="1580255863701" duration="4000" />
+      <workItem from="1580324034439" duration="450000" />
+      <workItem from="1580397243742" duration="466000" />
+      <workItem from="1580398247168" duration="23000" />
+      <workItem from="1580398288151" duration="1408000" />
+      <workItem from="1580481373921" duration="648000" />
+      <workItem from="1580483141858" duration="1014000" />
+      <workItem from="1580574039783" duration="6990000" />
+      <workItem from="1580604158548" duration="13960000" />
+      <workItem from="1580674338731" duration="2300000" />
+      <workItem from="1580680329883" duration="592000" />
+      <workItem from="1580681879324" duration="1038000" />
+      <workItem from="1580683150094" duration="2052000" />
+      <workItem from="1580687116252" duration="73000" />
+      <workItem from="1580929543382" duration="652000" />
+      <workItem from="1581089867467" duration="12000" />
+      <workItem from="1581090324468" duration="329000" />
+      <workItem from="1581262833449" duration="3000" />
+      <workItem from="1582296459020" duration="1209000" />
+      <workItem from="1582313985854" duration="188000" />
+      <workItem from="1582743123073" duration="598000" />
+      <workItem from="1582825099140" duration="6000" />
+      <workItem from="1583090739337" duration="33000" />
+      <workItem from="1583179708498" duration="33000" />
+      <workItem from="1599688327930" duration="836000" />
+      <workItem from="1599861683879" duration="2000" />
+      <workItem from="1599926925933" duration="603000" />
+      <workItem from="1599931615177" duration="198000" />
+      <workItem from="1611961959698" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="528" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611961971391">
+      <screen x="0" y="25" width="1680" height="933" />
+    </state>
+    <state x="528" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1680.933@0.25.1680.933" timestamp="1611961971391" />
+  </component>
+</project>

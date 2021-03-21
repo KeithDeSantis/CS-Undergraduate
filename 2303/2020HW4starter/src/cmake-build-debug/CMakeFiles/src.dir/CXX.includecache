@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/AdjMat.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/LinkedList.h
+Room.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Room.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Production.h
+stdio.h
+-
+stdbool.h
+-
+string.h
+-
+stdlib.h
+-
+AdjMat.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/AdjMat.h
+Room.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Room.h
+LinkedList.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/LinkedList.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Room.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Tests.cpp
+Tests.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Tests.h
+stdbool.h
+-
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Tests.h
+Production.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW4starter/src/Production.h
+

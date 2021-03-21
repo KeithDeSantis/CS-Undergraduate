@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/LinkedList.h
+checker.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/checker.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/board.cpp
+cstdio
+-
+board.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/board.h
+random
+-
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/board.h
+stdio.h
+-
+checker.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/checker.h
+LinkedList.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/LinkedList.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/HW5/checker.h
+

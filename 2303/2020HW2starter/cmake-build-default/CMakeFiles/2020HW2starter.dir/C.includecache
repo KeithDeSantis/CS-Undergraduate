@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/marker.h
+stdbool.h
+-
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/space.c
+stdlib.h
+-
+stdio.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/stdio.h
+space.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/space.h
+marker.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/marker.h
+
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/space.h
+marker.h
+/Users/kushshah/Library/Mobile Documents/com~apple~CloudDocs/Assignments for School/CS/2303/2020HW2starter/src/marker.h
+stdbool.h
+-
+
