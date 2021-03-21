@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kushshah/Desktop/Project4/scheduler.c
+scheduler.h
+/home/kushshah/Desktop/Project4/scheduler.h
+
+/home/kushshah/Desktop/Project4/scheduler.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+stdbool.h
+-
+time.h
+-
+math.h
+-
+string.h
+-
+

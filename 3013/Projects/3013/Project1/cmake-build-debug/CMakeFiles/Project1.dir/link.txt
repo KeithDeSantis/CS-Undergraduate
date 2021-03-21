@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Project1.dir/prolific.c.o CMakeFiles/Project1.dir/generation.c.o CMakeFiles/Project1.dir/explorer.c.o CMakeFiles/Project1.dir/slug.c.o CMakeFiles/Project1.dir/slugrace.c.o  -o Project1 

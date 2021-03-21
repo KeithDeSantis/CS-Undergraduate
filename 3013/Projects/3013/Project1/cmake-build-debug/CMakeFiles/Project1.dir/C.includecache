@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kushshah/Desktop/Project1/slugrace.c
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+wait.h
+-
+time.h
+-
+stdbool.h
+-
+math.h
+-
+

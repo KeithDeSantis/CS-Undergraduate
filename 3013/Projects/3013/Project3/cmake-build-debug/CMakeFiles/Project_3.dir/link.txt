@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Project_3.dir/goatmalloc.c.o CMakeFiles/Project_3.dir/test_goatmalloc.c.o  -o Project_3 

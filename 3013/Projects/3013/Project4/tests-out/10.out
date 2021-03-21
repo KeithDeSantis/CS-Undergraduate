@@ -1,0 +1,40 @@
+Execution trace with RR:
+Job 0 ran for: 5
+Job 1 ran for: 5
+Job 2 ran for: 1
+Job 3 ran for: 5
+Job 4 ran for: 5
+Job 5 ran for: 5
+Job 6 ran for: 3
+Job 7 ran for: 5
+Job 8 ran for: 5
+Job 9 ran for: 5
+Job 0 ran for: 5
+Job 1 ran for: 5
+Job 3 ran for: 1
+Job 4 ran for: 5
+Job 5 ran for: 5
+Job 7 ran for: 2
+Job 8 ran for: 5
+Job 9 ran for: 4
+Job 1 ran for: 5
+Job 4 ran for: 5
+Job 5 ran for: 4
+Job 8 ran for: 5
+Job 1 ran for: 3
+Job 4 ran for: 5
+Job 8 ran for: 3
+End of execution with RR.
+Begin analyzing RR:
+Job 0 -- Response time: 0 Turnaround: 68 Wait: 55
+Job 1 -- Response time: 7 Turnaround: 135 Wait: -56
+Job 2 -- Response time: 15 Turnaround: 16 Wait: 15
+Job 3 -- Response time: 16 Turnaround: 77 Wait: 67
+Job 4 -- Response time: 24 Turnaround: 140 Wait: -33
+Job 5 -- Response time: 30 Turnaround: 127 Wait: 10
+Job 6 -- Response time: 37 Turnaround: 40 Wait: 37
+Job 7 -- Response time: 40 Turnaround: 95 Wait: 79
+Job 8 -- Response time: 51 Turnaround: 157 Wait: -3
+Job 9 -- Response time: 57 Turnaround: 106 Wait: 97
+Average -- Response: 27.70 Turnaround: 96.10 Wait: 26.80
+End analyzing RR.
