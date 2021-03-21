@@ -1,0 +1,20 @@
+Tue May 12 11:38:27 EDT 2020
+ 
+There is one solution for 1-Queen Problem
+There are 0 solutions to the 2-Queens Problem
+There are 0 solutions to the 3-Queens Problem
+There are 2 solutions to the 4-Queens Problem
+There are 10 solutions to the 5-Queens Problem
+There are 4 solutions to the 6-Queens Problem
+There are 40 solutions to the 7-Queens Problem
+There are 92 solutions to the 8-Queens Problem
+There are 347 solutions to the 9-Queens Problem
+There are 710 solutions to the 10-Queens Problem
+There are 2646 solutions to the 11-Queens Problem
+There are 14040 solutions to the 12-Queens Problem
+There are 72849 solutions to the 13-Queens Problem
+There are 361377 solutions to the 14-Queens Problem
+There are 2253271 solutions to the 15-Queens Problem
+There are 14611588 solutions to the 16-Queens Problem
+ 
+Tue May 12 12:05:15 EDT 2020

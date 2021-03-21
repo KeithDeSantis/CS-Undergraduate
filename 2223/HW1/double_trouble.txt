@@ -1,0 +1,5 @@
+        G
+      G   G
+    Y   Y   Y
+  Y   Y   Y   Y
+O   O   O   O   O

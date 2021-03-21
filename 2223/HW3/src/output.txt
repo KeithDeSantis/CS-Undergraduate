@@ -1,0 +1,76 @@
+Welcome to Homework 3!
+-----------------------
+Palindrome
+----------
+Which string would you like to check?
+RaCeCaR is a palindrome
+Press anything to continue to next step
+
+
+
+
+
+
+
+
+
+
+Inversions
+----------
+Getting inversions for [3, 2, 1]
+Easy Inversion Count: 3
+Fast Inversion Count: 3
+Getting inversions for [4, 3, 2, 1]
+Easy Inversion Count: 6
+Fast Inversion Count: 6
+Getting inversions for [4, 3, 2, 1, 8, 7, 6, 5]
+Easy Inversion Count: 12
+Fast Inversion Count: 12
+Press anything to continue to next step
+
+
+
+
+
+
+
+
+
+
+Binary Reflective Gray Code
+----------
+Only works for 4 children
+ Index | Gray Code | Child(ren) in Photo | Action |
+--------------------------------------------
+0      | 0000      | A lovely landscape  | 
+
+1      | 0001      | Alice   | Alice In
+
+2      | 0011      | Bob & Alice   | Bob In
+
+3      | 0010      | Bob   | Alice Out
+
+4      | 0110      | Chris & Bob   | Chris In
+
+5      | 0111      | Chris & Bob & Alice   | Alice In
+
+6      | 0101      | Chris & Alice   | Bob Out
+
+7      | 0100      | Chris   | Alice Out
+
+8      | 1100      | Dylan & Chris   | Dylan In
+
+9      | 1101      | Dylan & Chris & Alice   | Alice In
+
+10      | 1111      | Dylan & Chris & Bob & Alice   | Bob In
+
+11      | 1110      | Dylan & Chris & Bob   | Alice Out
+
+12      | 1010      | Dylan & Bob   | Chris Out
+
+13      | 1011      | Dylan & Bob & Alice   | Alice In
+
+14      | 1001      | Dylan & Alice   | Bob Out
+
+15      | 1000      | Dylan   | Alice Out
+

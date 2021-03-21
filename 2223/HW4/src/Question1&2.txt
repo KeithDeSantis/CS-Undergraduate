@@ -1,0 +1,16 @@
+1)
+The ForwardElimination algorithm fails to check if A[i][i] is equal to 0 
+before using it as a divisor which in some cases result in a devision by zero 
+exception. 
+
+
+
+
+
+2)
+The BetterForwardElimination algorithm divides by the value at A[i][i]. 
+However it is possible that this value is equal to 0.
+In the explaination of the algorithm it is mentioned that this should be checked for and in the case that A[i][i] does in fact equal 0 then,
+"we should take advantage of the first elementary operation
+and exchange the ith row with some row below it that has a nonzero coefficient in the ith column".
+

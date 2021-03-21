@@ -1,0 +1,2 @@
+The name of the game is nim.
+in 1902 C. L. Bouton gave a complete analysis of the game.
