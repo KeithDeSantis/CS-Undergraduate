@@ -15,4 +15,4 @@ Year of graduation: 2023\
  -3043\
   Social Implications of Information Processing (C20)\
  -3516\
-  Computer Networks (A20)\
+  Computer Networks (A20)
