@@ -4,15 +4,17 @@ Year of graduation: 2023\
   Intro to Program Design (A19)\
 -2011\
   Into to Machine Organization and Assembly Language (B20)\
- -2102\
+-2102\
   Into to Object Orriented Design (B19)\
- -2303\
+-2303\
   System Programming Concepts (C20)\
- -2223\
+-2223\
   Algorithms (D20)\
- -3013\
+-3013\
   Operating Systems (C21)\
- -3043\
+-3043\
   Social Implications of Information Processing (C20)\
- -3516\
-  Computer Networks (A20)
+-3516\
+  Computer Networks (A20)\
+-3041\
+  Human-Computer Interaction (D21)  
