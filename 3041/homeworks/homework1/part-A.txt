@@ -1,0 +1,12 @@
+Re-designing shopping cart:
+	1) more shelves in the cart
+	2) scale
+	3) Item scanner built in on cart
+	4) self checkout system on cart
+	5) auto wheel locking if customer tries to leave without paying
+	6) modular shelving system
+	7) cart tracking system for data analysis
+	8) assistence button
+	9) map of store layout
+	10) phone/list holder
+
