@@ -1,0 +1,6 @@
+Proritize Ideas:
+	1) self checkout system (further investigastion needed to determine level of achivability)
+	2) auto wheel locking 
+	3) assistence button
+	4) map of store (screen)
+	
