@@ -7,3 +7,6 @@
 [submodule "3733/Projects/Project0"]
 	path = 3733/Projects/Project0
 	url = https://github.com/svadlamudi2/CS3733-Starter-Code
+[submodule "3041/labs/3041/labs/lab2"]
+	path = 3041/labs/3041/labs/lab2
+	url = https://github.com/kush5683/lab2.git
