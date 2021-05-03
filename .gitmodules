@@ -1,12 +1,6 @@
-[submodule "3041/lab1"]
-	path = 3041/lab1
-	url = https://github.com/kush5683/lab1
-[submodule "3041/lab0"]
-	path = 3041/lab0
-	url = https://github.com/kush5683/lab0
 [submodule "3733/Projects/Project0"]
 	path = 3733/Projects/Project0
 	url = https://github.com/svadlamudi2/CS3733-Starter-Code
-[submodule "3041/labs/3041/labs/lab2"]
-	path = 3041/labs/3041/labs/lab2
-	url = https://github.com/kush5683/lab2.git
+[submodule "3733/CS3733-Team-M-Project"]
+	path = 3733/CS3733-Team-M-Project
+	url= https://github.com/CS3733-D21-Team-M/CS3733-Team-M-Project.git
