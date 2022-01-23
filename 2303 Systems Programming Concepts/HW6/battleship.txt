@@ -1,0 +1,345 @@
+Player 2's turn.
+2, 5 is a miss!
+Player 1's turn.
+0, 0 is a miss!
+Player 2's turn.
+4, 6 is a miss!
+Player 1's turn.
+0, 1 is a miss!
+Player 2's turn.
+1, 2 is a miss!
+Player 1's turn.
+0, 2 is a miss!
+Player 2's turn.
+3, 3 is a miss!
+Player 1's turn.
+0, 3 is a miss!
+Player 2's turn.
+6, 5 is a miss!
+Player 1's turn.
+0, 4 is a miss!
+Player 2's turn.
+1, 4 is a miss!
+Player 1's turn.
+0, 5 is a miss!
+Player 2's turn.
+3, 6 is a hit!
+Player 1's turn.
+0, 6 is a miss!
+Player 2's turn.
+2, 6 is a miss!
+Player 1's turn.
+0, 7 is a miss!
+Player 2's turn.
+3, 5 is a hit!
+Player 1's turn.
+0, 8 is a miss!
+Player 2's turn.
+3, 4 is a hit!
+Player 1's Cruiser sunked!
+Player 1's turn.
+0, 9 is a miss!
+Player 2's turn.
+0, 4 is a hit!
+Player 1's turn.
+1, 0 is a miss!
+Player 2's turn.
+0, 3 is a miss!
+Player 1's turn.
+1, 1 is a miss!
+Player 2's turn.
+0, 5 is a hit!
+Player 1's turn.
+1, 2 is a miss!
+Player 2's turn.
+0, 6 is a hit!
+Player 1's turn.
+1, 3 is a miss!
+Player 2's turn.
+0, 7 is a hit!
+Player 1's Battleship sunked!
+Player 1's turn.
+1, 4 is a miss!
+Player 2's turn.
+5, 9 is a miss!
+Player 1's turn.
+1, 5 is a miss!
+Player 2's turn.
+4, 4 is a miss!
+Player 1's turn.
+1, 6 is a miss!
+Player 2's turn.
+7, 0 is a miss!
+Player 1's turn.
+1, 7 is a miss!
+Player 2's turn.
+6, 1 is a miss!
+Player 1's turn.
+1, 8 is a hit!
+Player 2's turn.
+2, 4 is a miss!
+Player 1's turn.
+1, 9 is a miss!
+Player 2's turn.
+7, 7 is a miss!
+Player 1's turn.
+2, 0 is a miss!
+Player 2's turn.
+9, 2 is a miss!
+Player 1's turn.
+2, 1 is a miss!
+Player 2's turn.
+4, 0 is a miss!
+Player 1's turn.
+2, 2 is a miss!
+Player 2's turn.
+0, 2 is a miss!
+Player 1's turn.
+2, 3 is a miss!
+Player 2's turn.
+9, 6 is a miss!
+Player 1's turn.
+2, 4 is a hit!
+Player 2's turn.
+0, 1 is a miss!
+Player 1's turn.
+2, 5 is a hit!
+Player 2's turn.
+1, 7 is a miss!
+Player 1's turn.
+2, 6 is a hit!
+Player 2's Cruiser sunked!
+Player 2's turn.
+7, 2 is a miss!
+Player 1's turn.
+2, 7 is a miss!
+Player 2's turn.
+6, 7 is a miss!
+Player 1's turn.
+2, 8 is a hit!
+Player 2's turn.
+9, 8 is a miss!
+Player 1's turn.
+2, 9 is a miss!
+Player 2's turn.
+1, 5 is a miss!
+Player 1's turn.
+3, 0 is a miss!
+Player 2's turn.
+2, 8 is a miss!
+Player 1's turn.
+3, 1 is a miss!
+Player 2's turn.
+8, 8 is a miss!
+Player 1's turn.
+3, 2 is a miss!
+Player 2's turn.
+8, 4 is a miss!
+Player 1's turn.
+3, 3 is a miss!
+Player 2's turn.
+4, 3 is a miss!
+Player 1's turn.
+3, 4 is a miss!
+Player 2's turn.
+6, 0 is a miss!
+Player 1's turn.
+3, 5 is a miss!
+Player 2's turn.
+7, 1 is a miss!
+Player 1's turn.
+3, 6 is a miss!
+Player 2's turn.
+5, 0 is a hit!
+Player 1's turn.
+3, 7 is a miss!
+Player 2's turn.
+5, 1 is a hit!
+Player 1's turn.
+3, 8 is a hit!
+Player 2's turn.
+5, 2 is a hit!
+Player 1's turn.
+3, 9 is a miss!
+Player 2's turn.
+5, 3 is a hit!
+Player 1's turn.
+4, 0 is a miss!
+Player 2's turn.
+5, 4 is a hit!
+Player 1's Carrier sunked!
+Player 1's turn.
+4, 1 is a miss!
+Player 2's turn.
+9, 1 is a miss!
+Player 1's turn.
+4, 2 is a miss!
+Player 2's turn.
+8, 1 is a miss!
+Player 1's turn.
+4, 3 is a miss!
+Player 2's turn.
+4, 5 is a miss!
+Player 1's turn.
+4, 4 is a miss!
+Player 2's turn.
+3, 2 is a miss!
+Player 1's turn.
+4, 5 is a miss!
+Player 2's turn.
+7, 6 is a miss!
+Player 1's turn.
+4, 6 is a miss!
+Player 2's turn.
+8, 9 is a miss!
+Player 1's turn.
+4, 7 is a miss!
+Player 2's turn.
+0, 8 is a miss!
+Player 1's turn.
+4, 8 is a hit!
+Player 2's turn.
+8, 0 is a miss!
+Player 1's turn.
+4, 9 is a hit!
+Player 2's turn.
+6, 4 is a miss!
+Player 1's turn.
+5, 0 is a miss!
+Player 2's turn.
+3, 1 is a miss!
+Player 1's turn.
+5, 1 is a miss!
+Player 2's turn.
+0, 9 is a miss!
+Player 1's turn.
+5, 2 is a miss!
+Player 2's turn.
+9, 0 is a miss!
+Player 1's turn.
+5, 3 is a miss!
+Player 2's turn.
+7, 9 is a miss!
+Player 1's turn.
+5, 4 is a miss!
+Player 2's turn.
+6, 8 is a miss!
+Player 1's turn.
+5, 5 is a miss!
+Player 2's turn.
+3, 8 is a miss!
+Player 1's turn.
+5, 6 is a miss!
+Player 2's turn.
+6, 6 is a miss!
+Player 1's turn.
+5, 7 is a miss!
+Player 2's turn.
+7, 3 is a miss!
+Player 1's turn.
+5, 8 is a hit!
+Player 2's Carrier sunked!
+Player 2's turn.
+3, 0 is a miss!
+Player 1's turn.
+5, 9 is a hit!
+Player 2's turn.
+4, 9 is a hit!
+Player 1's turn.
+6, 0 is a miss!
+Player 2's turn.
+3, 9 is a hit!
+Player 1's turn.
+6, 1 is a miss!
+Player 2's turn.
+2, 9 is a hit!
+Player 1's Destroyer sunked!
+Player 1's turn.
+6, 2 is a miss!
+Player 2's turn.
+8, 6 is a miss!
+Player 1's turn.
+6, 3 is a miss!
+Player 2's turn.
+9, 4 is a miss!
+Player 1's turn.
+6, 4 is a miss!
+Player 2's turn.
+9, 3 is a miss!
+Player 1's turn.
+6, 5 is a miss!
+Player 2's turn.
+2, 2 is a miss!
+Player 1's turn.
+6, 6 is a miss!
+Player 2's turn.
+2, 3 is a miss!
+Player 1's turn.
+6, 7 is a miss!
+Player 2's turn.
+7, 4 is a miss!
+Player 1's turn.
+6, 8 is a miss!
+Player 2's turn.
+7, 8 is a miss!
+Player 1's turn.
+6, 9 is a hit!
+Player 2's turn.
+1, 9 is a miss!
+Player 1's turn.
+7, 0 is a miss!
+Player 2's turn.
+5, 5 is a miss!
+Player 1's turn.
+7, 1 is a miss!
+Player 2's turn.
+9, 5 is a miss!
+Player 1's turn.
+7, 2 is a hit!
+Player 2's turn.
+5, 7 is a miss!
+Player 1's turn.
+7, 3 is a hit!
+Player 2's Destroyer sunked!
+Player 2's turn.
+8, 7 is a miss!
+Player 1's turn.
+7, 4 is a miss!
+Player 2's turn.
+9, 7 is a miss!
+Player 1's turn.
+7, 5 is a miss!
+Player 2's turn.
+4, 1 is a miss!
+Player 1's turn.
+7, 6 is a miss!
+Player 2's turn.
+6, 9 is a miss!
+Player 1's turn.
+7, 7 is a miss!
+Player 2's turn.
+4, 7 is a hit!
+Player 1's turn.
+7, 8 is a miss!
+Player 2's turn.
+3, 7 is a miss!
+Player 1's turn.
+7, 9 is a hit!
+Player 2's Battleship sunked!
+Player 2's turn.
+4, 8 is a hit!
+Player 1's Submarine sunked!
+
+>>>>> Player 2 wins! <<<<<
++===================================================
+|                    PLAYER STATS                   
++---------------------------------------------------
+| PLAYER 1 : 14 hits                                
+|            66 misses                              
+|            80 total shots                         
+|            21.21% hit/miss ratio                 
+| PLAYER 2 : 17 hits                                
+|            64 misses                              
+|            81 total shots                         
+|            26.56% hit/miss ratio                 
++===================================================
