@@ -1,0 +1,131 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname labewa) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+;; Lab 6
+;; Keith DeSantis
+
+
+(define-struct borrower (name country biz loan percent-raised))
+;; A Borrower is a (make-borrower String String String Number Number)
+;; interp: A Borrower is person/buisness asking for a loan where,
+;; name is the borrower's name
+;; country is the country the borrower is from
+;; biz is the business the loan is for
+;; loan the the loan amount asked for
+;; percent-raised is the percentage of the loan that has already been raised
+
+; a ListofBorrower is one of:
+; - empty
+; - (cons Borrower ListofBorrower)
+
+(define BADBORROWER (make-borrower "Chad" "USA" "Nutrition" 300000 0))  ; defining some examples of Borrowers
+(define GOODBORROWER (make-borrower "Archibald" "England" "Cleaning Supplies" 10000 0.68))
+(define RYAN (make-borrower "Ryan" "USA" "Steroids" 25000 1))
+
+(define LIST1 (cons BADBORROWER (cons GOODBORROWER (cons RYAN empty)))) ; example list
+(define LIST2 (cons RYAN empty))
+
+
+
+
+;;
+;; 1
+;;
+
+;; any-from?: ListofBorrower String -> Boolean
+;; consumes a ListofBorrower and a country name and produces true if any borrowers are from that country
+
+(check-expect (any-from? LIST1 "USA") true)
+(check-expect (any-from? LIST1 "USAsdad") false)
+(check-expect (any-from? empty "USA") false)
+
+(define (any-from? lob country)
+
+  (local [(define (country? borr)
+            
+            (string=? (borrower-country borr) country))]
+    
+    (if (cons? (filter country? lob))
+
+        true
+
+        false)))
+
+
+
+;;
+;; 2
+;;
+
+;; find-by-business: ListofBorrower String -> ListofBorrower
+;; consumes a ListofBorrowers and a type of company (String) and produces a ListofBorrower that is just the Borrowers involved in that kind of company
+
+(check-expect (find-by-business LIST1 "Nutrition") (list BADBORROWER))
+(check-expect (find-by-business LIST1 "sijabfa") empty)
+(check-expect (find-by-business empty "Nutrition") empty)
+
+(define (find-by-business lob biz)
+
+  (local [(define (business? borr)
+
+            (string=? (borrower-biz borr) biz))]
+
+    (filter business? lob)))
+
+
+
+
+
+;;
+;; 3
+;;
+
+;; funds-needed: ListofBorrower -> Number
+;; consumes a ListofBorrower and produces the sum of the funds left to raise for each Borrower
+
+(check-expect (funds-needed LIST1) 303200)
+(check-expect (funds-needed empty) 0)
+(check-expect (funds-needed LIST2) 0)
+
+(define (funds-needed lob)
+
+  (local [(define (sum lon acc)
+
+            (cond [(empty? lon) acc]
+
+                  [(cons? lon) (sum (rest lon) (+ (first lon) acc))]))
+
+          (define (funds-left borr)
+
+            (* (borrower-loan borr) (- 1 (borrower-percent-raised borr))))]
+
+    (sum (map funds-left lob) 0)))
+
+    
+
+
+
+;;
+;; 4
+;;
+
+;; no-funds-pledged: ListofBorrower -> ListofString
+;; consumes a ListofBorrower and produces a list of the names of just the Borrowers who've received no funding yet
+
+(check-expect (no-funds-pledged LIST1 empty) (list "Chad"))
+(check-expect (no-funds-pledged LIST2 empty) empty)
+(check-expect (no-funds-pledged empty empty) empty)
+
+(define (no-funds-pledged lob acc)
+
+  (local [(define (none? borr)
+
+            (= 0 (borrower-percent-raised borr)))]
+
+    (cond [(empty? lob) acc]
+
+          [(cons? lob) (if (none? (first lob))
+
+                           (no-funds-pledged (rest lob) (cons (borrower-name (first lob)) acc))
+
+                           (no-funds-pledged (rest lob) acc))])))
