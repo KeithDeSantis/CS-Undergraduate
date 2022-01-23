@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/2020HW1starter.dir/src/2020HW1starter.c.o CMakeFiles/2020HW1starter.dir/src/HW1.c.o CMakeFiles/2020HW1starter.dir/src/production.c.o CMakeFiles/2020HW1starter.dir/src/tests.c.o  -o 2020HW1starter 
