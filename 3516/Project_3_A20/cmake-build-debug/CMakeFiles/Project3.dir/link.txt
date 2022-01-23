@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Project3.dir/node0.c.o CMakeFiles/Project3.dir/node1.c.o CMakeFiles/Project3.dir/node2.c.o CMakeFiles/Project3.dir/node3.c.o CMakeFiles/Project3.dir/project3.c.o  -o Project3 
