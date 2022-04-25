@@ -22,5 +22,7 @@ Originally forked from kush5683's directory to retrieve our collaborative work i
   - Foundations of Computer Science (A21)
 ## 3733
   - Software Engineering (D21)
+## 4341
+  - Introduction to Artificial Intelligence (C22)
 ## 4999 
   - Independent Study with Craig Shue (A21)
