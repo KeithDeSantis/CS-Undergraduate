@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     output
+Instances:    21313
+Attributes:   9
+              Row
+              Column
+              Goal Row
+              Goal Column
+              Vertical Distance to Goal
+              Horizontal Distance to Goal
+              Direction
+              Sector Cost
+              Cost To Goal
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+Cost To Goal =
+
+     -0.1364 * Row +
+      0.0183 * Column +
+      0.0616 * Goal Row +
+      2.7938 * Vertical Distance to Goal +
+      2.918  * Horizontal Distance to Goal +
+     -0.2633 * Direction +
+      0.0375 * Sector Cost +
+     -0.0396
+
+Time taken to build model: 0.27 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.9292
+Mean absolute error                      1.7196
+Root mean squared error                  2.289 
+Relative absolute error                 33.3301 %
+Root relative squared error             36.9601 %
+Total Number of Instances            21313     
+
+
+C 
