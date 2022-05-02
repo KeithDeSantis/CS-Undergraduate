@@ -36,6 +36,14 @@ Originally forked from kush5683's directory to retrieve our collaborative work i
   - Introduction to Artificial Intelligence (C22)
     - Java
     - Python
+## 4401
+  - Software Security Engineering (D22)
+    - Python
+    - C
+    - Assembly
+## 4516
+  - Advanced Computer Networks (D22)
+    - Python
 ## 4999 
   - Independent Study with Craig Shue (A21)
     - C
