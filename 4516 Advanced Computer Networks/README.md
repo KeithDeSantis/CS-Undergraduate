@@ -9,4 +9,6 @@ The project description is included at `resources.pdf`
 
 For sake of future projects in the course, many files and code have been omitted from this public repository, including but not limited to our OpenFlow controller scripts.
 
+---
+
 If you have interest in seeing the omitted course materials feel free to contact me at `kwdesantis@wpi.edu` or `keithwdesantis@gmail.com`.
