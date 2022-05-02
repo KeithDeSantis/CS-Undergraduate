@@ -1,0 +1,184 @@
+-------------------------------- INITIAL OBSERVATIONS ------------------------------------
+
+main is calling vuln
+
+vuln is making a buffer of size 16
+
+It is then reading into buffer from stdin, but it is doing it using the "%16s" format. (using scanf)
+
+While I don't know how exactly %16s interacts with scanf, with functions like printf it prints the argument as a string with 16 characters of padding
+(which I assume are just white spaces).
+
+This "%16s" seems to be limiting the input somehow. When you put in 15 or less characters the program exits normally. When you put in 16 or more it
+segfaults, but not on the immediate return address of vuln.
+
+Regardless of how many characters I put in, the %16s seems to be limiting me somehow because the memory 17 above where buffer starts doesn't change.
+
+The segfault occurs as main tries to leave and exit, as rsp ends up pointing to nonsense.
+
+The hint of NASA, when I googled NASA SPQR I got a project they ran called "Small Payload Quick Return" which makes me think the payload we give it
+has to be small (no nop sleds). Not sure about the quick return part.
+
+------------------------------- THINKING ALOUD ABOUT SHELLCODE -------------------------
+
+I don't know of any shellcode thats small enough to fit in that buffer. If I could find some and if I was able to edit the least significant
+byte of the previous rbp value which is stored at rbp, I've be able to influence when main returns and have it point back to my shellcode (I think)
+but what shell code is 15 bytes or less?
+
+So I either have to inject some 15 byte or less code, or I have to find a gadget that I can use in the binary.
+
+The challenge also says it may be easy or it may be tricky, chances are 1 in 16... which makes me think the scanf is doing some funky shit with 
+every 16 bytes I write to it it does something weird (maybe jump ahead in memory 16 bytes??? idk).
+
+----------------------------------- AFTER TESTING -------------------------------------
+
+After some testing, 15 or less bytes doesn't affect the program's memory. But 16 or more bytes (doesn't seem to matter if I do multiples of 16)
+fill in 16 bytes, then adjust the address that's store where RBP is pointing (which in important for recovering the stack frame and eventually
+returning out of main to the function epilogue). 
+
+On my machine the address held there normally (<=15 bytes input) ends in e110. But, when 16+ bytes are read in that address is changed to end in
+e100. This obviously messes up the math down the line when main tries to return, and it tries to jump to a nonsense address and segfaults.
+
+Unclear why this is happening or how it's useful.
+
+---------------------------------- AFTER READING ---------------------------------------
+
+After reading a bit, %16s means its reading in AT MOST 16 characters as a string. So it does limit you. Small-Payload-Quick-Return. What can I do in 16
+bytes, changing one thing???
+
+----------------------------------- AFTER ASKING GUIN ----------------------------------
+
+I'm dumb lol. Null terminator is added on. So when 16 or more are used it is filled with the null terminator. This still feels like a CRAZY
+small amount of wiggle room though. 
+
+The only big manipulation I can think of would be setting ENV variables to mess with the stack addresses, but even then, 
+what code is useful to return to to get the flag?
+
+Prof said it doesn't have to do with format string vulnerabilities.
+
+Also, rsp is pointing to the beginning of buffer when scan is called. So the address that was there is being overwritten with our thing and a null byte.
+Not sure how its useful though.
+
+Enviornment variables do seem to move addresses, but enough to affect things??
+
+------------------------------------ MORE TESTING -----------------------------------------
+
+So enviornment variables do affect the stack addresses, and this is non-trivial.
+
+By adding ENV variables, the addresses can be fucked with.
+
+Through this fuckery, we can get a different value saved in vuln's rbp (the old rbp of main that it will be reset to).
+
+This value can have its last byte rewritten by 00 (from the null terminator of a full buffer), and, so rbp will be reset back to that number we 
+set, with last byte 0x00. 
+
+IF 0x8 above this byte is a valid address that points to code, then main's leave-ret call pair will move rsp, pop rsp into rbp, moving rsp up 0x8 so it 
+is pointing to that address, and ret, causing the return to go to the code at that address.
+
+The question is, how the fuck is this helpful?
+
+What code could I run that would be helpful for me? I feel like I don't have enough space to inject shellcode.
+
+Found this gadget: 0x00000000004005c3 : pop rdi ; ret
+
+Can use this to call system with /bin/sh????
+
+It's gotta be using code reuse and system('/bin/sh').
+
+That's my thought
+
+
+Having env variable of 16 or more bytes moves the "old" rbp address (so the one that is involved with main returning)
+
+The EXPLOIT env variable is at 0x7fffffffefe0
+System Address is 0x7ffff7a52390
+/bin/sh address is 0x7ffff7b99d57
+
+If I can get the address that vuln's rbp points to (main's rbp) to be 0x8 below my env variable, I can put my code into my EXPLOIT env variable
+
+-------------------- AFTER TRYING CODE REUSE AND ENV VARIABLE STUFF ---------------------------
+
+It's not intended to be solved using code reuse and the system call I think. It's supposed to be doable with just what we've learning in class. But how?
+
+Maybe if I can get an enviornment variable with my shellcode, and get the return rbp of main to be 0x8 below it's address, then I can maybe 
+execute my code? I'm very limited though in that I'm only able to change the last bytes of it to 0x00.
+
+So, my env variable would have to be at something ending in 0x08, and would have to be at an address that has the same first bytes as the main rbp. 
+I'm not sure that's possible, since the stack will be moved along with the enviornment variables being added.
+
+It doesn't seem to be. I'm once again at a stand still.
+
+_____________________________ ASKING GUIN __________________________________
+
+It does involved redirection to shell code. It's just a matter of figuring out how I guess.
+
+I can make my shell code execve easily. Could even put nops before it, but how can I get my thing to jump back
+there by only overwriting the last byte of main's rbp with 0x00?
+
+
+So my goal it to put nops and shellcode in an ENV variable, and write enough to the enviornment variable space so that the 
+value stored in rbp during vuln, when the last byte of it is turn to 0x00, is somewhere in those nops.
+
+
+I could put a (jmp ENV variable address guess) in my buffer (maybe nops before), then find a size of ENV variables
+that make the overwritting of the last byte of main's rbp will land in my buffer.
+
+JMP's code is 0xc3 I believe.
+
+mov rax, ADDRESS-OF-ENV
+jmp rax
+
+which I think is ->
+
+0x48 0xc7 0xc0 ADDRESS-OF-ENV
+0xff 0xe0
+
+Supposedly 13 bytes
+
+
+
+We want the overwriting of 0x00 to make it go back 0x30 bytes. (this will point it to the beginning of our buffer)
+So we want the last byte to be 0x30.
+
+
+
+------------------------- RE-THOUGHT ------------------------
+
+All we need is to put the address_guess of our ENV nops and shellcode 0x8 bytes into our buffer, while having the 
+ENV's setup right so that the overwritten last byte of main's rbp is 0x30.
+
+LOCALLY:
+ENV must be 224 + n*256 where n is an integer long to make the last byte of main's rbp to be 0x30
+
+
+This method will work. I'm really close to certain.
+
+I got the run working once on my machine and got to my nop sled, (then the shellcode was acting weird).
+
+But now my buffer string isn't being read in properly. It's some fuckery with Python. When I try to print b'' bytes
+in python it won't fill the buffer no matter what I try (although I SWEAR it was before on my successful run),
+but just filling the buffer with like 16 a's still breaks it as expected.
+
+My working run also had 0x00 null bytes at the end (for the address of the ENV variable) which I thought would fuck 
+it up (or cause behavior like the shit I'm seeing now) but didn't at the time. I've tested with and without
+0x00 null bytes. Same thing.
+
+Weird, but I'm close.
+
+
+-------------------------- ALMOST --------------------------------
+
+It's working server side on GDB, taking into account LINES and COLUMNS. But it's not running outside GDB.
+
+Unsure why. Last thing I'm gonna try is a HUGE nop sled.
+
+The only other thing I can think of is that something is different so the size of my EXPLOIT env variable has to be different
+to make that last byte 0x30. The only way I can think to test that though would be figuring out how much bytes are needed
+to change it by 0x10, then testing by adding that many bytes 16 times to ensure I've hit the 0x30 I think. Idk it feels
+wrong.
+
+
+------------------ GOT IT ---------------------
+
+
+Nop sled was too small lol

@@ -1,0 +1,11 @@
+use a gadget to ret to go to system which will be after it in the stack
+
+
+
+gadget: 0x56555426
+
+system: 0xf7e29f10
+
+exit: 0xf7e1d160
+
+/bin/sh: 0xf7f689db

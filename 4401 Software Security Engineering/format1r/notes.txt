@@ -1,0 +1,13 @@
+0xffffd750 is our input string (changes based on input, -0x1 for each character)
+
+1356
+
+1352
+
+338
+
+684 (680 after addr of input) between stack and our input
+
+171 (170) %x's to read to it
+
+0x5655700c address of target

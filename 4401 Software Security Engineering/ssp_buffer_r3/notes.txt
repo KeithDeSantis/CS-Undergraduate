@@ -1,0 +1,7 @@
+address of win: 0x55555555491a
+
+
+used gcc with --param=ssp_buffer_size=150 and it seg faults (bus errors) instead of aborting with ssp_test
+
+Setting the ssp_buffer to less than the expected buffers in the functions (~96) it goes back to aborting (not on my Windows 
+machine for some reason)

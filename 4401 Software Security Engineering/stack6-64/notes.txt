@@ -1,0 +1,5 @@
+0x00000000004006f3 is a pop rdi; ret gadget.
+
+This is most likely what I'll use as it lets me populate the first argument for system to be called.
+
+Just need to make sure my stack is set up right

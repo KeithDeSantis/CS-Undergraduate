@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    for (int x = 0; x < 257; x++) {
+        long uVar1 = x;
+    long retVal = uVar1 & 0xffffffffffffff00 | (long)(uVar1 != 0); 
+    // Checking something about byte size...
+    // Every byte worth + 1 changes the value to 1+number that many bytes can hold
+    printf("%ld\n", retVal);
+    }
+}
+
+It is taking a needle (base64 encoded) and seeing if it's in the haystack you give
+
+
+Search takes in the haystack and the needle input and uses that weird thunk_FUN to try and find it.
+
+If it finds it it will return anything other than 0, and then it checks if it returned 0 or not and says whether it found it.
+
+The way it checks is very strange though...
+
+
+Not stack canary protected... so I just need to find a useful function
+Stack is NOT executable
+
+
+
+Base64 encoded shell code (not little endian): 53 44 48 32 56 6b 69 2f 4c 32 4a 70 62 69 38 76 63 32 68 58 56 46 39 71 4f 31 69 5a 44 77 55 3d

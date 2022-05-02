@@ -1,0 +1,22 @@
+Buff Size on My machine seems to be 72.
+
+It checks that the ret value is in the stack somewhere.
+
+So we need to inject to OUR CODE which we have written into the stack.
+
+We want to inject shellcode so the program will launch a shell, then rewrite the return address to the address of the shellcode.
+
+Need to write assembly to Set up arguments in proper registers and call the syscall, all to pop a shell.
+
+(Just get the shell code from online)
+
+
+
+Shell code I have is being weird. It seems to get to the syscall, but is saying "Illegal Instruction" when 
+it runs. Tried different things to keep it from closing but still busted. The shellcode I have doesn't set
+RSI or RDX with a second or third arg (just 0x0), could that be involved? It was also one of the only
+shellcodes I could find that seemed decent and to work.
+
+Gonna have to ask on discord or office hours.
+
+On server the return address of stack4-64 is 0x7fffffffe418 (rbp 8 below that)

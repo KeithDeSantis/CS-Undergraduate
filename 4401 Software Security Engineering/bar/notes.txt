@@ -1,0 +1,11 @@
+address of pop rdi; ret - 0x0000000000000923 (offset?)
+
+We want first input to be our format string... then 
+print out canary and address of __libc_start_main
+
+Use addr of __libc_start_main to calculate addr of gadget and system
+
+Overflow: padding + canary + padding + gadget + "/bin/sh" + system_addr
+
+
+1b3d88 shows up when we search libc file for strings

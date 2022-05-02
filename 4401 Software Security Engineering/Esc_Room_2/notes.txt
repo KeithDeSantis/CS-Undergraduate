@@ -1,0 +1,25 @@
+root password: 135711131719
+
+submit.php?id=1 the line to add to the url from the laptop
+
+
+
+user		password hash
+root		8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643
+admin		4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260
+test		72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa
+guest		de7d1b721a1e0632b7cf04edf5032c8ecffa9f9a08492152b926f1a5a7e765d7
+info		1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9
+adm		189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7
+mysql		4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce
+user		2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6
+administrator	e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8
+oracle		6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
+server		5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+ftp		8ce86a6ae65d3692e7305e2c58ac62eebd97d3d943e093f577da25c36988246b
+pi		043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89
+
+The hint also says URLS are the KEY to a new world
+These result in: S Q L i n j 3 c t 1 0 N s
+
+Inputing SQLinj3cti10Ns into the door code gives you the flag.

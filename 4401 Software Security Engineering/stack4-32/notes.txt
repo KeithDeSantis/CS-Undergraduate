@@ -1,0 +1,20 @@
+Understand the idea of how to overflow and use shellcode injection with nop-sledding, but the ret of main is weird,
+it's doing some strange stuff with ecx and popping a bunch and isn't working the way I thought it would, need to ask
+later or see if they talk about it in class.
+
+
+Server info:
+
+GDB ebp: 0xffffd548
+
+Return address guess: 0xffffd644
+
+return address: 0xffffde05
+
+
+This one had some fuckery with ecx, such that ecx needed to be an address to a spot that contained an address to our nop sled.
+
+So, I used a sled of my nop sled guess address, and had ecx contain a guess to get to that sled. The guess had to be a multiple of 4 so it would land on the beginning of the address in my sled. Then that address guess would land in the nop sled and execute my shell code!
+
+
+

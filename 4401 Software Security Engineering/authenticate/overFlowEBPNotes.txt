@@ -1,0 +1,19 @@
+I can over flow the content that EBP points to while it the function is in auth()
+
+But I can't reach the return address that is stored directly after that because of the limit hardcoded
+on decode length (<13) that must be met to call auth()
+
+Need 12 bytes to overflow what EBP points to CAN DO THIS
+
+Need 16 bytes to overflow the return address WANT THIS
+
+12 byte decode_length ~= 16 byte original_input
+16 byte decode length ~= 20ish byte original input (i forget)
+
+
+As far as I can tell I can't use the content that EBP points to for anything,
+since any arithmetic is done with EBP's pointer address, not the content it points to.
+
+When leave is called it moves ESP to point at the same place as EBP, then pops EBP, making EBP the content
+of what it was pointing to before, and ESP pointing to the chunk of memory that was just above EBP (in this case the return address
+that I can't access)

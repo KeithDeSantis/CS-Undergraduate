@@ -1,0 +1,109 @@
+0x0000000000021ba0 <+0>:     push   r13
+   0x0000000000021ba2 <+2>:     push   r12
+   0x0000000000021ba4 <+4>:     xor    eax,eax
+   0x0000000000021ba6 <+6>:     push   rbp
+   0x0000000000021ba7 <+7>:     push   rbx
+   0x0000000000021ba8 <+8>:     mov    rbp,rcx
+   0x0000000000021bab <+11>:    sub    rsp,0x98
+   0x0000000000021bb2 <+18>:    mov    QWORD PTR [rsp+0x8],rdx
+   0x0000000000021bb7 <+23>:    mov    rdx,QWORD PTR [rip+0x3c937a]        # 0x3eaf38
+   0x0000000000021bbe <+30>:    mov    QWORD PTR [rsp+0x18],rdi
+   0x0000000000021bc3 <+35>:    mov    DWORD PTR [rsp+0x14],esi
+   0x0000000000021bc7 <+39>:    test   rdx,rdx
+   0x0000000000021bca <+42>:    je     0x21bd5 <__libc_start_main+53>
+   0x0000000000021bcc <+44>:    mov    edx,DWORD PTR [rdx]
+   0x0000000000021bce <+46>:    xor    eax,eax
+   0x0000000000021bd0 <+48>:    test   edx,edx
+   0x0000000000021bd2 <+50>:    sete   al
+   0x0000000000021bd5 <+53>:    test   r9,r9
+   0x0000000000021bd8 <+56>:    mov    DWORD PTR [rip+0x3c95c2],eax        # 0x3eb1a0
+   0x0000000000021bde <+62>:    je     0x21bec <__libc_start_main+76>
+   0x0000000000021be0 <+64>:    xor    edx,edx
+   0x0000000000021be2 <+66>:    xor    esi,esi
+   0x0000000000021be4 <+68>:    mov    rdi,r9
+   0x0000000000021be7 <+71>:    call   0x43420 <__cxa_atexit>
+   0x0000000000021bec <+76>:    mov    rdx,QWORD PTR [rip+0x3c9265]        # 0x3eae58
+   0x0000000000021bf3 <+83>:    mov    ebx,DWORD PTR [rdx]
+   0x0000000000021bf5 <+85>:    and    ebx,0x2
+   0x0000000000021bf8 <+88>:    jne    0x21cd8 <__libc_start_main+312>
+   0x0000000000021bfe <+94>:    test   rbp,rbp
+   0x0000000000021c01 <+97>:    je     0x21c18 <__libc_start_main+120>
+   0x0000000000021c03 <+99>:    mov    rax,QWORD PTR [rip+0x3c929e]        # 0x3eaea8
+   0x0000000000021c0a <+106>:   mov    rsi,QWORD PTR [rsp+0x8]
+   0x0000000000021c0f <+111>:   mov    edi,DWORD PTR [rsp+0x14]
+   0x0000000000021c13 <+115>:   mov    rdx,QWORD PTR [rax]
+   0x0000000000021c16 <+118>:   call   rbp
+   0x0000000000021c18 <+120>:   mov    rdx,QWORD PTR [rip+0x3c9239]        # 0x3eae58
+   0x0000000000021c1f <+127>:   mov    eax,DWORD PTR [rdx+0x1b0]
+   0x0000000000021c25 <+133>:   test   eax,eax
+   0x0000000000021c27 <+135>:   jne    0x21cf8 <__libc_start_main+344>
+   0x0000000000021c2d <+141>:   test   ebx,ebx
+   0x0000000000021c2f <+143>:   jne    0x21d3b <__libc_start_main+411>
+   0x0000000000021c35 <+149>:   lea    rdi,[rsp+0x20]
+   0x0000000000021c3a <+154>:   call   0x3ec00 <_setjmp>
+   0x0000000000021c3f <+159>:   test   eax,eax
+   0x0000000000021c41 <+161>:   jne    0x21c8e <__libc_start_main+238>
+   0x0000000000021c43 <+163>:   mov    rax,QWORD PTR fs:0x300
+   0x0000000000021c4c <+172>:   mov    QWORD PTR [rsp+0x68],rax
+   0x0000000000021c51 <+177>:   mov    rax,QWORD PTR fs:0x2f8
+   0x0000000000021c5a <+186>:   mov    QWORD PTR [rsp+0x70],rax
+   0x0000000000021c5f <+191>:   lea    rax,[rsp+0x20]
+   0x0000000000021c64 <+196>:   mov    QWORD PTR fs:0x300,rax
+   0x0000000000021c6d <+205>:   mov    rax,QWORD PTR [rip+0x3c9234]        # 0x3eaea8
+   0x0000000000021c74 <+212>:   mov    rsi,QWORD PTR [rsp+0x8]
+   0x0000000000021c79 <+217>:   mov    edi,DWORD PTR [rsp+0x14]
+   0x0000000000021c7d <+221>:   mov    rdx,QWORD PTR [rax]
+   0x0000000000021c80 <+224>:   mov    rax,QWORD PTR [rsp+0x18]
+   0x0000000000021c85 <+229>:   call   rax
+   0x0000000000021c87 <+231>:   mov    edi,eax
+   0x0000000000021c89 <+233>:   call   0x43110 <exit>
+   0x0000000000021c8e <+238>:   mov    rax,QWORD PTR [rip+0x3ced13]        # 0x3f09a8
+   0x0000000000021c95 <+245>:   ror    rax,0x11
+   0x0000000000021c99 <+249>:   xor    rax,QWORD PTR fs:0x30
+   0x0000000000021ca2 <+258>:   call   rax
+   0x0000000000021ca4 <+260>:   mov    rax,QWORD PTR [rip+0x3ceced]        # 0x3f0998
+   0x0000000000021cab <+267>:   ror    rax,0x11
+   0x0000000000021caf <+271>:   xor    rax,QWORD PTR fs:0x30
+   0x0000000000021cb8 <+280>:   lock dec DWORD PTR [rax]
+   0x0000000000021cbb <+283>:   sete   dl
+   0x0000000000021cbe <+286>:   test   dl,dl
+   0x0000000000021cc0 <+288>:   jne    0x21cf4 <__libc_start_main+340>
+   0x0000000000021cc2 <+290>:   mov    edx,0x3c
+   0x0000000000021cc7 <+295>:   nop    WORD PTR [rax+rax*1+0x0]
+   0x0000000000021cd0 <+304>:   xor    edi,edi
+   0x0000000000021cd2 <+306>:   mov    eax,edx
+   0x0000000000021cd4 <+308>:   syscall 
+   0x0000000000021cd6 <+310>:   jmp    0x21cd0 <__libc_start_main+304>
+   0x0000000000021cd8 <+312>:   mov    rax,QWORD PTR [rsp+0x8]
+   0x0000000000021cdd <+317>:   lea    rdi,[rip+0x1919b1]        # 0x1b3695
+   0x0000000000021ce4 <+324>:   mov    rsi,QWORD PTR [rax]
+   0x0000000000021ce7 <+327>:   xor    eax,eax
+   0x0000000000021ce9 <+329>:   call   QWORD PTR [rdx+0x168]
+   0x0000000000021cef <+335>:   jmp    0x21bfe <__libc_start_main+94>
+   0x0000000000021cf4 <+340>:   xor    eax,eax
+   0x0000000000021cf6 <+342>:   jmp    0x21c87 <__libc_start_main+231>
+   0x0000000000021cf8 <+344>:   mov    r13,QWORD PTR [rdx+0x1a8]
+   0x0000000000021cff <+351>:   mov    rdx,QWORD PTR [rip+0x3c90e2]        # 0x3eade8
+   0x0000000000021d06 <+358>:   mov    ebp,eax
+   0x0000000000021d08 <+360>:   shl    rbp,0x4
+   0x0000000000021d0c <+364>:   mov    r12,QWORD PTR [rdx]
+   0x0000000000021d0f <+367>:   add    r12,0x470
+   0x0000000000021d16 <+374>:   add    rbp,r12
+   0x0000000000021d19 <+377>:   jmp    0x21d31 <__libc_start_main+401>
+   0x0000000000021d1b <+379>:   mov    rax,QWORD PTR [r13+0x18]
+   0x0000000000021d1f <+383>:   test   rax,rax
+   0x0000000000021d22 <+386>:   je     0x21d29 <__libc_start_main+393>
+   0x0000000000021d24 <+388>:   mov    rdi,r12
+   0x0000000000021d27 <+391>:   call   rax
+   0x0000000000021d29 <+393>:   mov    r13,QWORD PTR [r13+0x40]
+   0x0000000000021d2d <+397>:   add    r12,0x10
+   0x0000000000021d31 <+401>:   cmp    r12,rbp
+   0x0000000000021d34 <+404>:   jne    0x21d1b <__libc_start_main+379>
+   0x0000000000021d36 <+406>:   jmp    0x21c2d <__libc_start_main+141>
+   0x0000000000021d3b <+411>:   mov    rax,QWORD PTR [rsp+0x8]
+   0x0000000000021d40 <+416>:   mov    rdx,QWORD PTR [rip+0x3c9111]        # 0x3eae58
+   0x0000000000021d47 <+423>:   lea    rdi,[rip+0x191961]        # 0x1b36af
+   0x0000000000021d4e <+430>:   mov    rsi,QWORD PTR [rax]
+   0x0000000000021d51 <+433>:   xor    eax,eax
+   0x0000000000021d53 <+435>:   call   QWORD PTR [rdx+0x168]
+   0x0000000000021d59 <+441>:   jmp    0x21c35 <__libc_start_main+149>

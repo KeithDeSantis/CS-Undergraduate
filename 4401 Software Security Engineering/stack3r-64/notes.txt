@@ -1,0 +1,25 @@
+We can use the buffer to overflow all the way up to the return address 0x8 bytes above with to a code pointer that points to
+
+Place in ur buffer:
+
+bytes for call win
+
+
+And override the return code address with the address of that above^
+
+
+
+the beginning of the win instruction is at offset 0x7aa,
+
+but from where? Need to run gdb to figure that out I think
+
+It is at address 0x5555555547aa on the server
+
+
+Buffer size is 103 or 104 I believe
+
+So should fill the buffer then input the little endian version of 0x5555555547aa
+
+"\xaa\x47\x55\x55\x55\x55\x00\x00" I think (might need to add \x00\x00 at the end to make the address a full 64 bits?? 0x00005555555547aa)
+
+ªGUUUU

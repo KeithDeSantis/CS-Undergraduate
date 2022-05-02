@@ -1,0 +1,16 @@
+Maybe fill in zoomcall as if it is an auth struct, such that there is filler and then auth->auth is 1.
+
+Then, in auth, input the address of zoomcall, because I believe it is trying to read it as an address, so it will get the string at zoomcall's address
+
+(which will overwrite auth)
+
+THIS ISNT RIGHT^
+
+
+-----------------------------------------------
+
+When the line read in for auth is 48 long it turns auth->auth to 10. Adding another character jumps it to 2657
+
+Maybe overwrite auth* with zoomcall such that it points the the right distance before zoomcall such that the 1 i put in zoomcall is auth->auth.
+
+Doesnt seem right tho

@@ -1,0 +1,15 @@
+We need to overflow on the heap.
+
+Run to see where the data and fp are on the heap  (in terms of hex addresses)
+
+structs may add some extra length to the memory taken up by data or fp
+
+There is also meta data with each variable.
+
+You want fp to be after data (higher address than data)
+
+
+Your input is the first arg to main
+
+
+Find out where winner is saved and out that in fp

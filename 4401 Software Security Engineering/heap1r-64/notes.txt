@@ -1,0 +1,3 @@
+0x0000000000400697 is address (or offset) of winner.
+
+Supposedly can overflow i1 to change the address that i2->name points to to be where the return address is, then rewrite it to our winner address.

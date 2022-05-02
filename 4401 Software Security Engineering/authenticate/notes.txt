@@ -1,0 +1,139 @@
+local_14 is our calcDecodeLength() of our input:
+	i.e. 0.75*length + other if '=' is last characters
+
+local_38 gets our base64decode version of input into it
+
+local_32 holds our input
+
+'input' is initialized as an array of 0's of size 0xc (12)
+
+
+
+Length of our input can be up to 17 Bytes due to the return 
+value of calcDecodeLength() (unless ending 1 or 2 bytes '=')
+
+local_38 gets the base64decode of our input put into it
+
+the first local_14 bytes of that decoded thing (local_38) is then 
+memcpy'd into 'input'
+
+auth() is then called on local_14 and we want it to return 1
+(or at least for the iVar1 that it sets to be one by the end)
+
+	auth():
+		
+	local_14 bits of 'input' are written to auStack12 
+	(which should be all the parts of 'input' we wrote
+	to before)
+	
+	local_10 is then init'd as calc_md5(local_18,0xc)
+	
+	local_10 is our output'd hash
+
+	local_10 is compared with 
+	"f87cd601aa7fedca99018a8be88eda34"
+
+	We return true if the comparison is false
+
+If auth() returns true
+
+we call correct()
+
+	correct():
+	
+	checks if input._0_4_ == -0x21524111
+	
+	if true, supposedly gives us the flag
+
+
+hypotheses:
+
+might want string of length 5?
+
+
+-0x21524111 encoded with base64 -> LTB4MjE1MjQxMTE=
+in this case local_14 is 11.
+
+
+
+
+NOTES AFTER LOTS OF WORK:
+
+Pretty confident that I have to overflow the end of the auth()
+stack when input is being memcpy()'d to auStack12 in auth().
+
+The memory layout is:
+
+
+ebp + 0x8 (5 bytes long) 0xffffd22c
+Code Address of Where to Return To 
+
+---------------------------------
+
+ebp 0xffffd228 
+AUTH'S STACK
+
+---------------------------------
+
+ebp - 0x8 (8 bytes long) 0xffffd220
+auStack12
+has the first decodeLength bytes 
+of input copied to it
+
+---------------------------------
+
+ebp - 0xc (4 bytes long) 0xffffd214
+local_10
+pointer to hash characters
+
+---------------------------------
+ebp - 0x14 (8 bytes long) 0xffffd0c
+local_18	
+used for hashing
+
+
+So, it takes writing 12 bytes to auStack12 to reach the
+return address saved above auth's stack.
+
+We then want to write 4 bytes of the address of call correct
+(0x0804940c)
+ADDRESS OF CALL CORRECT
+
+
+But, our original_input can be at most 17 bytes long since 
+17*0.75 = 12.75 as a decode length and it seems to round down and the check
+to even run auth() in the code only runs
+if our decodeLength < 12.
+
+But we need our decodeLength to be 16 so we can reach the
+code address and write our desired command's address
+
+
+
+The 4 bits between auth's stack and the return command are the location of the old ebp. Can you overwrite that???
+
+the right hash is at 0x80da684
+
+For the strcmp it compares that ^ string to [ebp - 0xc]
+
+So if ebp = 0x80da690 then it will compare it to itself
+
+
+DIDNT WORK
+
+But I am able to make what the space EBP is pointing to whatever 4 bytes I want.
+
+But the content of EBP's space isn't used but rather the address is when comparing, so not sure how to make it work
+
+EBP's address during auth: 0xffffd228
+
+return command's address during auth (outside our range): 0xffffd22c
+
+TRUE hash's address: 0x80da684
+
+
+
+Got it except GDB may not run the executable with the right permssions on the server, and running the ./authorize alone I think uses different memory addresses so I can't create an encoded key for that
+
+
+input is saved at 0x0811eb40

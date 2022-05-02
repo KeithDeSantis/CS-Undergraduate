@@ -1,0 +1,8 @@
+win function ptr offset from binary's placement: 0x5555555547aa
+
+buff size = 87 bytes
+
+
+To solve use gdb to find win's function pointer,
+
+Then overflow buffer and replace with the pointer to win (LITTLE ENDIAN STYLE)
