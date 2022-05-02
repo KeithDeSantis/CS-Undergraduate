@@ -1,6 +1,6 @@
 # Software Security Engineering
 
-This repository contains files related to challenges in the CS 4401 Software Security Engineering course.
+This repository contains files related to challenges in the CS 4401 Software Security Engineering course, with a separate directory for each challenge problem.
 
 This course was structured as a "Capture the Flag Challenge" event, where challenges related to security were released and students acted as the "attacker" to exploit files or websites and retrieve a `flag.txt` file to submit for points. Topics covered included Binary Exploitation, Web Exploitation, Game Exploitation, and others.
 
