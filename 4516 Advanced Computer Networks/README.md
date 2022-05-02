@@ -1,4 +1,4 @@
-# Advanced Computer Networks Project
+# Advanced Computer Networks Project (Python)
 
 This repository contains files related to Team 17's term project for CS4516: Advanced Computer Networks at\
 WPI in D term of 2022.
