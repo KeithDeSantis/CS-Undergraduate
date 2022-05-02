@@ -1,1 +1,1 @@
-# Machine Organization and Assembly Language (C)
+# Machine Organization and Assembly Language (C - Assembly)
