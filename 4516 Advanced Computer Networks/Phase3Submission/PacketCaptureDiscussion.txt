@@ -1,0 +1,20 @@
+Testing was performed through packet captures and running tcpping -r 3 -x 110 www.team17.4516.cs.wpi.edu on Host 1 to perform 110 tcppings.
+
+
+In test.pcap we can see many different DNS queries and answers. Packet number 4 is the initial Query from host 1 and packet number 5 is the answer from host 2.
+We can see the answer in packet 5:
+
+    Answers
+        www.team17.4516.cs.wpi.edu: type A, class IN, addr 10.61.1.10
+            Name: www.team17.4516.cs.wpi.edu
+            Type: A (Host Address) (1)
+            Class: IN (0x0001)
+            Time to live: 604800 (7 days)
+            Data length: 4
+            Address: 10.61.1.10
+The destination address is is 10.61.1.10 which does not exist on the network. If we look at seq 0 in DNS_output.txt we can see that host 1 received 
+the DNS response with the edited IP address (seq 0: tcp response from 10.61.17.215 [open]  4.992 ms). 
+
+This happens for every DNS request and response.
+
+The next DNS query answer pair is packet number 15 and 16. This time the IP is edited to 10.61.17.170 as seen in seq 2. 

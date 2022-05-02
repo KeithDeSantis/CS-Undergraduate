@@ -1,0 +1,9 @@
+See RTT_vs_Time.png graph for comparison of OpenFlow vs. traditional network.
+
+The data showed OpenFlow performing significantly slower than the traditional network. This was anticipated,
+as the simple controller was not creating any flow rules, but simply approving every single packet that was sent
+through the OVS. Due to this, each packet couldn't be simply routed through the OVS to it's destination.
+Instead, each packet had to be encapsulated in an OpenFlow PACKET_IN message, elevated to the controller on
+Host 4, processed by the controller, encapsulated in an OpenFlow PACKET_OUT message, sent back to the OVS,
+and only then routed to its destination. This was clearly expected to cause some additional overhead when compared
+to the traditional network. As anticipated, OpenFlow had significantly longer RTTs for the 100 TCP connections.

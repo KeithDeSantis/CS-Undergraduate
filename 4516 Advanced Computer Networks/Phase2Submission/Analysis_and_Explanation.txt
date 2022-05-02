@@ -1,0 +1,14 @@
+We selected frame no. 10, 11, 14, 15 from the test.pcap file to preform analysis on.
+
+OVS saw the SYN from Host 1 at 16.514ms (after beginning the capture) and elevated the SYN PACKET_IN to the controller.
+The controller had the packet for 1.2ms.
+OVS received the SYN PACKET_OUT from the controller on Host 4 at 17.715ms.
+OVS then forwarded the TCP SYN packet to Host 3, then received the response SYN ACK from Host 3.
+OVS elevated the SYN ACK PACKET_IN (encapsulating the SYN ACK from Host 3) at 18.293ms.
+The controller had the packet for 0.9ms.
+OVS got the SYN ACK PACKET_OUT at 19.194ms.
+RTT: 2.68ms
+
+As shown above, the time taken by the controller in total was 2.1ms out of a total RTT of 2.68.
+This is why OpenFlow is so much slower than a traditional network when there are no relevant flow table entries.
+:)

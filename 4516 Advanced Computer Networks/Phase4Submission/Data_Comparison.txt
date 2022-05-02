@@ -1,0 +1,32 @@
+Two graphs were generated for comparison between Phase 2 and Phase 4 performance.
+
+------------------------------------ TCPPing_Graph.png -----------------------------------------------
+
+This graph was made using the data from tcppingData.txt. This test was run using tcpping -x 120 www.team17.4516.cs.wpi.edu.
+tcpping was used because it creates a new TCP connection each time it attempts to ping the server, meaning it will go through
+the entire TCP handshake, DNS resolution, and virtual IP assignment process for each ping.
+
+This will obviously increase the RTT, and we ran this test to see what the RTT of this initial connection of our system is.
+TCPPing_Graph.png compares this data to the Traditional and Simple OpenFlow network RTTs from Phase 2. As expected, these tcppings
+have significantly longer RTTs, in the order of 100's of ms instead of 10's.
+
+Small Note:
+Later in the trials the RTTs occasionally show extreme dips down to the levels of the traditional network,
+this is due to the way tcpping works and our FLOW_MOD TTLs (based on our DNS TTL). Our DNS TTL is around 10 minutes,
+so the FLOW_MODs created by previous DNS requests were still in place when the second half of the tcppings were executed,
+so sometimes the new tcppings would happen to fall under the prexisting FLOW_RULES, so they wouldn't go through the entire
+virtual IP assignment process. This was because a virtual IP was considered "freed" when the web request from Host 1 to Host 3
+was validated by the controller (as Professor Shue described in class), so there was a small chance that a new connection could be assigned that
+virtual IP before the FLOW_RULE timed out.
+
+------------------------------------ Ping_Graph.png -----------------------------------------------
+
+This graph was made using the data from pingData.txt. This test was run using ping -c 100 www.team17.4516.cs.wpi.edu.
+ping was used because it will only make one DNS request, then will make subsequent web requests using the original virtual IP
+assigned to it by the first DNS request. This allowed us to get data on how the system performed in terms of RTTs when normal communication
+was happening on the assigned SNAT and DNAT IPs.
+
+The first data point was omitted from Ping_Graph.png, since it was significantly higher than the rest and made legibility hard (154 ms).
+This is because, as mentioned above, the initial TCP handshake and DNS resolution and virtual IP assignment adds significant overhead for the initial connection.
+After that initial connection however, the network is simply running on the FLOW_RULES written by the controller during the initial connection step,
+and based on our data operates smoothly with RTTs similar to the traditional network, around < 1 ms, which we were very pleased with.

@@ -1,0 +1,66 @@
+(a) Does the approach offer any security benefits? If so, what are they? Are there any other benefits
+that could result from using the system?
+
+
+This SDN approach offers increased security in that it abstract out the true IP addresses of both the client and web server
+hosts. By reassigning all traffic in the client-web_server connection to use only virtual IPs that are reused between different
+connections, both the client and web-server's true identities are kept hidden. Any "on path adversaries" that intercept the traffic
+would not be able to discern who the client was, nor the true IP of the web server. This gives the client added anonymity, and also
+puts less trust on the client (in case they are malicious) by not giving the client the true IP of the server.
+
+The SDN assigning and validating virtual IPs also allows the network administrator to custom tailor how secure the system should be
+and in what ways validation should be checked. In our case, we built the system to validate virtual IPs if they were requested and
+approved through normal DNS requests, and they only remained valid for as long as the DNS request was valid, ensuring that
+clients would have to obey DNS TTLs or they would be denied access to the server.
+
+This system also makes spoofing of IPs more difficult, for example, if a DNS request was made from a valid client
+(say for example IP 63.72.61.67),that client isn't "validated" but is rather given the valid virtual IP,
+(say for example, IP 73.68.75.65) so a malicious client would not be able to connect to the web server
+by simply spoofing the valid client IP.
+
+The validation credentials and schema could easily be adapted to whatever needs a network administrator may need, to list just
+a few examples:
+- Virtual IPs would be assigned and deemed valid if they were requested by a client in a known white-list
+- Virtual IPs would be assigned and deemed valid under certain conditions (time of day, state of internal systems, etc)
+- Traffic deemed invalid or malicious could be given virtual IPs that are not marked as "valid" by the system,
+which could result in the malicious client either not being given access or even being directed to a HoneyPot Server or other
+system.
+- Etc...
+
+
+(b) The IPNL paper described a strong concerns about network address translation. Do these same
+concerns apply to the NAT approach implemented in Phase 4? Why or why not?
+
+
+The main concerns on NAT of the IPNL paper were 1) Hosts behind NAT are not globally addressable over the internet, 2) NAT complicates
+scalability as applications have to take into account the many different deployments of NAT.
+
+Each problem is complex, but in a way Phase 4's approach has addressed the first problem. Under this system, the client and web
+server are both still globally addressable, as they have their true IP addresses, 10.61.17.1 and 10.61.17.3. The NAT aspect
+and address translation only comes into play when communication between the two is happening and being validated.
+
+The second concern is not directly addresses by Phase 4's implementation. The concern with scalability has to do with both the
+lack of IPv4 address space (which Phase 4 of course doesn't solve) and with the complexity of taking multiple NAT deployments
+into account when developing applications. If multiple networks were to implement the system we have in Phase 4, this could still
+be a concern based on how differently each network is implemented and what expectation are placed on the client, but in general
+if the system was engineered cleanly this would be less of a concern than in traditional NAT, as all implementation specific
+procedures happen at the controller level. As long as the implementation followed the same formula of workflow, then the implementation
+should not complicate things for applications.
+
+
+(c) What implications would this end-host OpenFlow/NAT approach have on a network like WPI’s?
+When two machines on the LAN communicate, what would we expect to happen? What about
+when these machines communicate with off LAN systems?
+
+
+The implementation of such a system on WPI's network would need fine tuned and careful engineering. Given the limited IP space WPI owns,
+decisions would have to be made about how to create virtual IP pools for different machines (both client and host) so as to
+not waste IP space and not run out of IP space. Whether that entails having one network-wide pool of all unused IPs in our address
+space or creating sub-pools based on department, usage, or users. The initial TCP connection/DNS resolution of clients would also
+likely gain significant overhead (as seen in our analysis), as significant additional computation is added to the connection initiation.
+
+Two machines on LAN may well just act normally if they have ethernet information on one another and communicate using only MAC addresses
+instead of IP addresses, this does not exactly apply in every circumstance however, depending on the type of communication like DNS.
+
+Machines communicating on off LAN systems would likely experience the previously mentioned additional latency on initial connection,
+but after that see similar performance to a traditional network.
