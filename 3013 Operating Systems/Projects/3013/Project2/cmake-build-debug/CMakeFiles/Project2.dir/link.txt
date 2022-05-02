@@ -1,1 +1,0 @@
-/usr/bin/cc  -pthread -g   CMakeFiles/Project2.dir/stage.c.o CMakeFiles/Project2.dir/fedoops.c.o  -o Project2 
