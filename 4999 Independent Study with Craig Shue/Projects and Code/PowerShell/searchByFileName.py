@@ -87,7 +87,7 @@ def print_help():
     print(f"{bcolors.OKBLUE}<case-sensitive>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will make the search case sensitive if set to \"true\" or \"t\".\n")
     print(f"{bcolors.OKGREEN}<extension-type>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will search only for files with the given file extension (i.e. .txt; .java; .py).\n")
 
-if __name__ == "__main__": # TODO: Add file extension filter and case-sensitive options
+if __name__ == "__main__":# TODO abstract arguments to not be position in cmd line
 
     num_args = len(sys.argv)
 
