@@ -37,7 +37,7 @@ def find_substring_files(substring, source_folder, file_type=None):
 def containsSymbol(file, substring):
     name = file.name.upper()
     if substring in name: ##TODO add checking if we need to use the file type filter
-        print(f"FOUND -----> {bcolors.WARNING}{bcolors.BOLD}{file.name}{bcolors.ENDC} at --------> {bcolors.MAGENTA}{os.path.abspath(file)}{bcolors.ENDC}\n")
+        print(f"FOUND: {bcolors.WARNING}{bcolors.BOLD}{file.name}{bcolors.ENDC}\nAt: {bcolors.MAGENTA}{os.path.abspath(file)}{bcolors.ENDC}\n")
 
 
 # Recursively searches for files that contain the substring in their name
