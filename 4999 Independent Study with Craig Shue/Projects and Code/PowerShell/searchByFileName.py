@@ -30,7 +30,8 @@ class search_agent():
             "source_dir": os.getcwd(),
             "case_sensitive": False,
             "file_type": "",
-            "verbose": False
+            "verbose": False,
+            "timeout": -1
         }
 
         # List of functions related to flags to run on each filename
@@ -41,6 +42,10 @@ class search_agent():
         # Statistics used for verbose mode
         self.max_recursive_depth = 1
         self.number_dirs_searched = 0
+        self.start_time = None
+
+        # Original Directory
+        self.original_directory = os.getcwd()
 
     """
     Returns whether the file passes the case-sensitive filter. 
@@ -66,26 +71,18 @@ class search_agent():
     """Setup and running of recursive search"""
     def find_substring_files(self, substring):
         # Save current working directory
-        original_directory = os.getcwd()
+        self.original_directory = os.getcwd()
         source_folder = self.flags["source_dir"]
 
         if source_folder == ".":
             source_folder = str(os.getcwd())
 
         # Recursive search
-        start = time.time()
+        self.start_time = time.time()
         self.recursiveFindFiles(source_folder, substring, 0)
-        elapsed = time.time() - start
+        elapsed = time.time() - self.start_time
 
-        # Return to original directory
-        os.chdir(original_directory)
-
-        if self.flags["verbose"]:
-            print(f"Total time taken: {bcolors.OKGREEN}" + str(elapsed) + f"{bcolors.ENDC}")
-            print(f"Maximum recursive depth: {bcolors.OKCYAN}" + str(self.max_recursive_depth) + f"{bcolors.ENDC}")
-            print(f"Number of directories searched: {bcolors.WARNING}" + str(self.number_dirs_searched) + f"{bcolors.ENDC}")
-
-        exit(0)
+        self.cleanup()
 
     """
     Takes in a file and prints out the file name and absolute path if
@@ -109,6 +106,11 @@ class search_agent():
         # Book keeping for verbose mode
         self.update_recursive_depth(recursive_depth)
         self.number_dirs_searched = self.number_dirs_searched + 1
+
+        # Checking for timeout mode
+        if self.flags["timeout"] != -1 and ((time.time() - self.start_time) > self.flags["timeout"]):
+            self.cleanup()
+                
 
         dir_entries = os.scandir(source_dir)
 
@@ -169,6 +171,9 @@ class search_agent():
                 elif arg_type == "verbose":
                     if arg_val.lower() == "true" or arg_val.lower() == "t":
                         self.flags["verbose"] = True
+                # Timeout Flag
+                elif arg_type == "timeout":
+                    self.flags["timeout"] = float(arg_val)
                 
                 else:
                     raise Exception("Undefined argument")
@@ -184,7 +189,7 @@ class search_agent():
     def print_help(self):
 
         print(f"\n{bcolors.FAIL}{bcolors.UNDERLINE}{bcolors.BOLD}findByName{bcolors.ENDC}\n")
-        print(f"Syntax and arguments are as follows:\n\n{bcolors.FAIL}findByName{bcolors.ENDC} {bcolors.OKCYAN}<keyword>{bcolors.ENDC} dir={bcolors.OKGREEN}<source-directory>{bcolors.ENDC} case={bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} type={bcolors.OKGREEN}<extension-type>{bcolors.ENDC} verbose={bcolors.OKGREEN}<verbosity>{bcolors.ENDC}\n\n")
+        print(f"Syntax and arguments are as follows:\n\n{bcolors.FAIL}findByName{bcolors.ENDC} {bcolors.OKCYAN}<keyword>{bcolors.ENDC} dir={bcolors.OKGREEN}<source-directory>{bcolors.ENDC} case={bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} type={bcolors.OKGREEN}<extension-type>{bcolors.ENDC} verbose={bcolors.OKGREEN}<verbosity>{bcolors.ENDC} timeout={bcolors.OKGREEN}<timeout>{bcolors.ENDC}\n\n")
         print(f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Required Arguments:{bcolors.ENDC}\n")
         print(f"{bcolors.OKCYAN}<keyword>{bcolors.ENDC} is a keyword in a file name to be searched for.\n\n")
         print(f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Optional Arguments:{bcolors.ENDC}\n")
@@ -196,6 +201,8 @@ class search_agent():
         print("\tDefault value: None\n")
         print(f"{bcolors.OKGREEN}<verbosity>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that prints out statistics about the search once it has concluded when set to \"true\" or \"t\".\n")
         print("\tDefault value: False\n\n")
+        print(f"{bcolors.OKGREEN}<timeout>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that can be used to set a number of seconds for the search to run before timing out.\n")
+        print("\tDefault value: None\n\n")
         print("Example usage:\n")
         print(f"{bcolors.WARNING}findByName and dir=~/Desktop type=.txt{bcolors.ENDC}\n")
         print(f"This would search \"~/Desktop\" for files containing the substring \"and\" ({bcolors.UNDERLINE}not case-sensitive{bcolors.ENDC}) that have a \".txt\" file extension.\n")
@@ -204,6 +211,20 @@ class search_agent():
     def update_recursive_depth(self, depth):
         if depth > self.max_recursive_depth:
             self.max_recursive_depth = depth
+
+    """Function to call at end of program that handles exiting cleanly"""
+    def cleanup(self):
+        # Return to original directory
+        os.chdir(self.original_directory)
+
+        # Verbose Report
+        if self.flags["verbose"]:
+            print(f"Total time taken: {bcolors.OKGREEN}" + str(time.time()-self.start_time) + f"{bcolors.ENDC}")
+            print(f"Maximum recursive depth: {bcolors.OKCYAN}" + str(self.max_recursive_depth) + f"{bcolors.ENDC}")
+            print(f"Number of directories searched: {bcolors.WARNING}" + str(self.number_dirs_searched) + f"{bcolors.ENDC}")
+
+        # Exit
+        exit(0)
 
 
 if __name__ == "__main__":
