@@ -70,8 +70,6 @@ class search_agent():
 
     """Setup and running of recursive search"""
     def find_substring_files(self, substring):
-        # Save current working directory
-        self.original_directory = os.getcwd()
         source_folder = self.flags["source_dir"]
 
         if source_folder == ".":
