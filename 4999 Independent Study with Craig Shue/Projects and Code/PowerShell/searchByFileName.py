@@ -70,6 +70,7 @@ class search_agent():
 
     """Setup and running of recursive search"""
     def find_substring_files(self, substring):
+        
         source_folder = self.flags["source_dir"]
 
         if source_folder == ".":
@@ -186,24 +187,24 @@ class search_agent():
     """Print a help menu for syntax"""
     def print_help(self):
 
-        print(f"\n{bcolors.FAIL}{bcolors.UNDERLINE}{bcolors.BOLD}findByName{bcolors.ENDC}\n")
-        print(f"Syntax and arguments are as follows:\n\n{bcolors.FAIL}findByName{bcolors.ENDC} {bcolors.OKCYAN}<keyword>{bcolors.ENDC} dir={bcolors.OKGREEN}<source-directory>{bcolors.ENDC} case={bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} type={bcolors.OKGREEN}<extension-type>{bcolors.ENDC} verbose={bcolors.OKGREEN}<verbosity>{bcolors.ENDC} timeout={bcolors.OKGREEN}<timeout>{bcolors.ENDC}\n\n")
-        print(f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Required Arguments:{bcolors.ENDC}\n")
-        print(f"{bcolors.OKCYAN}<keyword>{bcolors.ENDC} is a keyword in a file name to be searched for.\n\n")
-        print(f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Optional Arguments:{bcolors.ENDC}\n")
-        print(f"{bcolors.OKGREEN}<source-directory>{bcolors.ENDC} is is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that specifies the {bcolors.UNDERLINE}absolute path name{bcolors.ENDC} from which to begin the recursive search.\n")
-        print("\tDefault value: Current Working Directory\n")
-        print(f"{bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will make the search case sensitive if set to \"true\" or \"t\".\n")
-        print("\tDefault value: False\n")
-        print(f"{bcolors.OKGREEN}<extension-type>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will search only for files with the given file extension (i.e. .txt; .java; .py).\n")
-        print("\tDefault value: None\n")
-        print(f"{bcolors.OKGREEN}<verbosity>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that prints out statistics about the search once it has concluded when set to \"true\" or \"t\".\n")
-        print("\tDefault value: False\n\n")
-        print(f"{bcolors.OKGREEN}<timeout>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that can be used to set a number of seconds for the search to run before timing out.\n")
-        print("\tDefault value: None\n\n")
-        print("Example usage:\n")
-        print(f"{bcolors.WARNING}findByName and dir=~/Desktop type=.txt{bcolors.ENDC}\n")
-        print(f"This would search \"~/Desktop\" for files containing the substring \"and\" ({bcolors.UNDERLINE}not case-sensitive{bcolors.ENDC}) that have a \".txt\" file extension.\n")
+        print(f"\n{bcolors.FAIL}{bcolors.UNDERLINE}{bcolors.BOLD}findByName{bcolors.ENDC}\n\n" +
+            f"Syntax and arguments are as follows:\n\n{bcolors.FAIL}findByName{bcolors.ENDC} {bcolors.OKCYAN}<keyword>{bcolors.ENDC} dir={bcolors.OKGREEN}<source-directory>{bcolors.ENDC} case={bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} type={bcolors.OKGREEN}<extension-type>{bcolors.ENDC} verbose={bcolors.OKGREEN}<verbosity>{bcolors.ENDC} timeout={bcolors.OKGREEN}<timeout>{bcolors.ENDC}\n\n\n" + 
+            f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Required Arguments:{bcolors.ENDC}\n\n" +
+            f"{bcolors.OKCYAN}<keyword>{bcolors.ENDC} is a keyword in a file name to be searched for.\n\n\n" +
+            f"{bcolors.MAGENTA}{bcolors.UNDERLINE}Optional Arguments:{bcolors.ENDC}\n\n" +
+            f"{bcolors.OKGREEN}<source-directory>{bcolors.ENDC} is is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that specifies the {bcolors.UNDERLINE}absolute path name{bcolors.ENDC} from which to begin the recursive search.\n\n" +
+            "\tDefault value: Current Working Directory\n\n" +
+            f"{bcolors.OKGREEN}<case-sensitivity>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will make the search case sensitive if set to \"true\" or \"t\".\n\n" +
+            "\tDefault value: False\n\n" +
+            f"{bcolors.OKGREEN}<extension-type>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument which will search only for files with the given file extension (i.e. .txt; .java; .py).\n\n" +
+            "\tDefault value: None\n" +
+            f"{bcolors.OKGREEN}<verbosity>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that prints out statistics about the search once it has concluded when set to \"true\" or \"t\".\n\n" +
+            "\tDefault value: False\n\n\n" +
+            f"{bcolors.OKGREEN}<timeout>{bcolors.ENDC} is an {bcolors.UNDERLINE}optional{bcolors.ENDC} argument that can be used to set a number of seconds for the search to run before timing out.\n\n" +
+            "\tDefault value: None\n\n\n" +
+            "Example usage:\n\n" +
+            f"{bcolors.WARNING}findByName and dir=~/Desktop type=.txt{bcolors.ENDC}\n\n" + 
+            f"This would search \"~/Desktop\" for files containing the substring \"and\" ({bcolors.UNDERLINE}not case-sensitive{bcolors.ENDC}) that have a \".txt\" file extension.\n")
 
     """Tracks maximum recursive depth for verbose mode"""
     def update_recursive_depth(self, depth):
