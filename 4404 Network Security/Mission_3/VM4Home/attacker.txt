@@ -1,0 +1,1 @@
+This is Host 4, which runs both the SDN controller process with Ryu, and the bot manager command server. IP: 10.64.6.4

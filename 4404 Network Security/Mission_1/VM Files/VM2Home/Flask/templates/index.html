@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   <script src="{{url_for('static', filename='css/index.js')}}" defer></script>
+</head>
+
+<body>
+   <div class="wrapper">
+      <form action="{{ url_for('display')}}" method=post>
+         <h1><label for="lname">SSN</label></h1>
+         <input type="text" id="SSN" name="SSN" placeholder="Enter your SSN as 123456789"><br><br>
+         <h1>Please select the candidate you want to vote for:</h1>
+         <div class="radio-wrapper">
+            <h2><input type="radio" id="canidate1" name="canidate" value="CraigShue">
+            <label for="canidate1">Craig Shue</label><br></h2>
+            <h2><input type="radio" id="canidate2" name="canidate" value="KushShah">
+            <label for="canidate2">Kush Shah<br>  </h2>
+            <h2><input type="radio" id="canidate3" name="canidate" value="KeithDeSantis">
+            <label for="canidate3">Keith DeSantis</label><br></h2>
+            <h2><input type="radio" id="canidate4" name="canidate" value="JakobMisbach">
+            <label for="canidate4">Jakob Misbach</label><br></h2>
+            <h2><input type="radio" id="writein-radio" name="canidate" value="writeIn">
+            <label for="writein">Write In</label><br><br></h2>
+            <input type="text" class="writeBox" id="writeBox" name="writeBox" placeholder="Enter your Vote"><br><br>
+         </div>
+         <input type="submit" value="Submit">
+      </form>
+   </div>
+</body>

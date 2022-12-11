@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>My Super Secure App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>My Super Secure App</h1>
+    <h2>You can trust us with all your most sensitive information</h2>
+    <form action="{{ request.url }}" method=post>
+        <div class="wrapper">
+            <div class="login-wrapper">
+                <h1><label for="lname">Please enter your two factor authentication code</label></h1>
+                <input type="text" name="code" placeholder="Code" />
+                <input type="submit" value="Login">
+            </div>
+        </div>
+
+    </form>
+</body>
+
+
+
+</html>

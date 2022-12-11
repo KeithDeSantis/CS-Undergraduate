@@ -1,0 +1,14 @@
+2FA Code Found: 847842
+Logging into site using stolen credentials...
+Submitting 847842 to received 2FA page url: https://votes.gov:8888/auth?username=admin ...
+Successfully hijacked account, account dashboard HTML:
+
+<div id='info_section'>
+    
+    <h1>Name: admin</h1>
+    
+    <h1>SSN: 348-30-2385</h1>
+    
+    <h1>BALANCE: $10000000000000</h1>
+    
+</div>
