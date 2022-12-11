@@ -41,9 +41,15 @@ Originally forked from kush5683's directory to retrieve our collaborative work i
     - Python
     - C
     - Assembly
+## 4404
+  - Tools and Techniques in Network Security (B22)
+    - Python
+    - OpenFlow Protocol (Ryu)
+    - MySQL
 ## 4516
   - Advanced Computer Networks (D22)
     - Python
+    - OpenFlow Protocol (Ryu)
 ## 4999 
   - Independent Study with Craig Shue (A21)
     - C
