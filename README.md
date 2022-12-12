@@ -38,21 +38,21 @@ An introduction to the concepts of artificial intelligence and their use cases. 
 * Java
 * Python
 ## 4401
-  - Software Security Engineering (D22)
-    - Python
-    - C
-    - Assembly
+This course was structured as a "Capture the Flag Challenge" event, where challenges related to security were released and students acted as the "attacker" to exploit files or websites and retrieve a flag.txt file to submit for points. Topics covered included Binary Exploitation, Web Exploitation, Game Exploitation, and others.
+* Python
+* C
+* Assembly
 ## 4404
-  - Tools and Techniques in Network Security (B22)
-    - Python
-    - OpenFlow Protocol (Ryu)
-    - MySQL
+This class explored common attack vectors and their related countermeasures in the field of network security. Topics varied class to class and were based around research papers in related fields. Some topics covered include SSL and TLS, OCSP, DNSSec, IPSec, BGP Spoofing, Multi-Factor Authentication, Botnets, Browser Fingerprinting, and more.
+* Python
+* OpenFlow Protocol (Ryu)
+* MySQL
 ## 4516
-  - Advanced Computer Networks (D22)
+This course centered around recent innovations and problems facing the field of computer networking. Included an iterative term project where we developed a Software Defined Network using the OpenFlow protocol to enforce dynamic DNS assignment and enforce honey-potting security measures on a web server architecture.
     - Python
     - OpenFlow Protocol (Ryu)
-## 4999 
-  - Independent Study with Craig Shue (A21)
+## 4999 Independent Study with Craig Shue (A21)
+An independent study where I researched multiple topics including but not limited to DLL's and DLL injection, powershell scripting, and Microsoft Detours, eventually doing some work adjacent to [Professor Shue's research](https://web.cs.wpi.edu/~cshue/projects/).
     - C
     - C ++
     - C #
