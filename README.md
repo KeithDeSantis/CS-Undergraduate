@@ -11,6 +11,7 @@ Originally forked from kush5683's directory to retrieve our collaborative work i
 This course taught the basics of the lower level organization of computers and how computation works. Discussed hardware involved in CPUs and how they operate. Learned about how processes are run by a CPU and how different data types were stored on the machine. Projects related to binary exploitation and memory manipulation.
 * C
 * Assembly
+* Bash
 ## 2102 Object-Oriented Programming (D20)
 An introduction to Java and the Object-Oriented Programming paradigm. Projects related to systems programming using objects, inheritance, and design strategies.
 * Java
@@ -42,6 +43,7 @@ This course was structured as a "Capture the Flag Challenge" event, where challe
 * Python
 * C
 * Assembly
+* Bash
 ## 4404
 This class explored common attack vectors and their related countermeasures in the field of network security. Topics varied class to class and were based around research papers in related fields. Some topics covered include SSL and TLS, OCSP, DNSSec, IPSec, BGP Spoofing, Multi-Factor Authentication, Botnets, Browser Fingerprinting, and more.
 * Python
@@ -49,12 +51,12 @@ This class explored common attack vectors and their related countermeasures in t
 * MySQL
 ## 4516
 This course centered around recent innovations and problems facing the field of computer networking. Included an iterative term project where we developed a Software Defined Network using the OpenFlow protocol to enforce dynamic DNS assignment and enforce honey-potting security measures on a web server architecture.
-    - Python
-    - OpenFlow Protocol (Ryu)
+* Python
+* OpenFlow Protocol (Ryu)
 ## 4999 Independent Study with Craig Shue (A21)
 An independent study where I researched multiple topics including but not limited to DLL's and DLL injection, powershell scripting, and Microsoft Detours, eventually doing some work adjacent to [Professor Shue's research](https://web.cs.wpi.edu/~cshue/projects/).
-    - C
-    - C ++
-    - C #
-    - PowerShell
-    - Bash
+* C
+* C ++
+* C #
+* PowerShell
+* Bash
