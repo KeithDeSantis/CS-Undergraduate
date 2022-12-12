@@ -5,6 +5,7 @@ Originally forked from kush5683's directory to retrieve our collaborative work i
 
 ## Year of graduation: 2023
 ## University: Worcester Polytechnic Institute
+## Focus: Cybersecurity
 
 ## 2011
   - Machine Organization (B20)
