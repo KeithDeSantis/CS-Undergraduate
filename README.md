@@ -38,18 +38,18 @@ A course built around working in a team of 11 to develop a Java application for 
 An introduction to the concepts of artificial intelligence and their use cases. Lessons covered hill climbing, graph searching, neural networks, reinforcement learning, machine learning, genetic algorithms, and more. The projects were built around A*, Genetic Algorithms, Machine Learning, and Reinforcement Learning.
 * Java
 * Python
-## 4401
+## 4401 Software Security Enginerring (D22)
 This course was structured as a "Capture the Flag Challenge" event, where challenges related to security were released and students acted as the "attacker" to exploit files or websites and retrieve a flag.txt file to submit for points. Topics covered included Binary Exploitation, Web Exploitation, Game Exploitation, and others.
 * Python
 * C
 * Assembly
 * Bash
-## 4404
+## 4404 Tools and Techniques in Network Security (B22)
 This class explored common attack vectors and their related countermeasures in the field of network security. Topics varied class to class and were based around research papers in related fields. Some topics covered include SSL and TLS, OCSP, DNSSec, IPSec, BGP Spoofing, Multi-Factor Authentication, Botnets, Browser Fingerprinting, and more.
 * Python
 * OpenFlow Protocol (Ryu)
 * MySQL
-## 4516
+## 4516 Advanced Computer Networks (D22)
 This course centered around recent innovations and problems facing the field of computer networking. Included an iterative term project where we developed a Software Defined Network using the OpenFlow protocol to enforce dynamic DNS assignment and enforce honey-potting security measures on a web server architecture.
 * Python
 * OpenFlow Protocol (Ryu)
