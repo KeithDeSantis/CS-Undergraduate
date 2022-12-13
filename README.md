@@ -26,11 +26,11 @@ An introduction to Systems programming and the C and C++ languages. Projects rel
 This course taught the design principles and mechanisms of operating systems. Topics included memory management, process management and virtual memory, threads and threading, file system design, and processing policies.
 * C
 ## 3043 Social Implications of Information Processing (B20)
-Social science course that discussed impact of computational sciences and programmed system on society and individuals. Focused on class discussions, case study research, and paper writing to explore the responsibilities of being a programmer in the modern world.
+Social science course that discussed impact of computational sciences and programmed systems on society and individuals. Focused on class discussions, case study research, and paper writing to explore the responsibilities of being a programmer in the modern world.
 ## 3133 Foundations of Computer Science (A21)
 Theoretical logic course that explained the mathematical and logical basis of computing. Topics taught included Finite Automata, Regular Expressions, Languages and Language Parsing, and Computational Theory.
 ## 3733 Software Engineering (D21)
-A course built around working in a team of 11 to develop a Java application for a Kiosk in Brigham and Women's Hospital. The process of software development was taught using common design patterns, the SCRUM methodology, and four week-long development "sprints."
+A course built around working in a team of 11 to develop a Java application for a Kiosk in Brigham and Women's Hospital. The process of software development was taught using common design patterns, the SCRUM methodology, and week-long development "sprints."
 * Java
 * JavaFX
 * CSS
