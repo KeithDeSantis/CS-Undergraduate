@@ -38,7 +38,7 @@ A course built around working in a team of 11 to develop a Java application for 
 An introduction to the concepts of artificial intelligence and their use cases. Lessons covered hill climbing, graph searching, neural networks, reinforcement learning, machine learning, genetic algorithms, and more. The projects were built around A*, Genetic Algorithms, Machine Learning, and Reinforcement Learning.
 * Java
 * Python
-## 4401 Software Security Enginerring (D22)
+## 4401 Software Security Engineering (D22)
 This course was structured as a "Capture the Flag Challenge" event, where challenges related to security were released and students acted as the "attacker" to exploit files or websites and retrieve a flag.txt file to submit for points. Topics covered included Binary Exploitation, Web Exploitation, Game Exploitation, and others.
 * Python
 * C
