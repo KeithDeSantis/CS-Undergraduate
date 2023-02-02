@@ -60,3 +60,10 @@ An independent study where I researched multiple topics including but not limite
 * C #
 * PowerShell
 * Bash
+## Senior Qualifying Project (MQP) with Craig Shue
+Senior project developed Warden, a system to enforce control flow integrity for web servers in the “Single-Use Server” model, a network architecture that utilizes containerization (akin to lightweight virtual machines) to separate client interactions and prevent attack persistence and propagation. Through this isolationist approach we attempt to use detailed data from both benign and malicious traffic to better identify malicious traffic in the future without sacrificing performance.
+* C
+* PHP
+* Python
+* MySQL
+* Bash
