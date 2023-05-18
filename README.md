@@ -53,6 +53,9 @@ This class explored common attack vectors and their related countermeasures in t
 This course centered around recent innovations and problems facing the field of computer networking. Included an iterative term project where we developed a Software Defined Network using the OpenFlow protocol to enforce dynamic DNS assignment and enforce honey-potting security measures on a web server architecture.
 * Python
 * OpenFlow Protocol (Ryu)
+## 4801 Introduction to Cryptography and Communication Security (D23)
+This course introduced the basics of cryptographic schemes and analysis. Assignments involved creating and breaking various cryptographic schemes and analyzing their strengths. Some topics included AES, DES, 3DES, Block and Stream Cipher, Public Key Encryption, and Digital Signatures.
+* Python
 ## 4999 Independent Study with Craig Shue (A21)
 An independent study where I researched multiple topics including but not limited to DLL's and DLL injection, powershell scripting, and Microsoft Detours, eventually doing some work adjacent to [Professor Shue's research](https://web.cs.wpi.edu/~cshue/projects/).
 * C
