@@ -11,4 +11,4 @@ For sake of future projects in the course, many files and code have been omitted
 
 ---
 
-If you have interest in seeing the omitted course materials feel free to contact me at `kwdesantis@wpi.edu` or `keithwdesantis@gmail.com`.
+If you have interest in seeing the omitted course materials feel free to contact me at `keithwdesantis@gmail.com`.
